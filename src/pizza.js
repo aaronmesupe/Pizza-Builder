@@ -1,37 +1,35 @@
 // Write your Pizza Builder JavaScript in this file.
 window.onload = function() {
 
-/*var btnPepperonni = document.getElementsByClassName('btn-pepperonni');
-btnPepperonni.addEventListener('click', togglePepperonni, false);
+if( $('section').hasClass('crust-gluten-free') === true) {
+	$('section').removeClass('crust-gluten-free');
+};
 
-//var btnGreenPeppers =  
+if( $('section').hasClass('sauce-white') === true) {
+	$('section').removeClass('sauce-white');
+};
 
-function togglePepperonni (){
-	$('.btn-pepperonni').click(function(){
-		$('.pep').fadeToggle("slow" , "linear");
-	
-	});
-}*/
 
+event.preventDefault();
 
 $('.btn-pepperonni').click(function(){
-		$('.pep').fadeToggle("slow" , "linear");
+		$('.pep').fadeToggle();
 });
 
-$('.btn-mushroom').click(function(){
-		$('.mushroom').fadeToggle("slow" , "linear");
+$('.btn-mushrooms').click(function(){
+		$('.mushroom').fadeToggle();
 });
 
 $('.btn-green-peppers').click(function(){
-		$('.green-pepper').fadeToggle("slow" , "linear");
+		$('.green-pepper').fadeToggle();
 });
 
 $('.btn-sauce').click(function(){
-		$('.sauce-white').fadeToggle("slow" , "linear");
+		$('.sauce').toggleClass('sauce-white');
 });
 
 $('.btn-crust').click(function(){
-		$('.crust-gluten-free').fadeToggle("slow" , "linear");
+		$('.crust').toggleClass('crust-gluten-free');
 });
 
 
